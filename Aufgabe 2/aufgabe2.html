@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="people.js"></script>
+    <script src="aufgabe2.js"></script>
+    <title>Aufgabe 2</title>
+</head>
+<body>
+    <script>
+    let youngestPerson = people[0];
+        for (let i = 1; i < people.length; i++) {
+          if (people[i].age < youngestPerson.age) {
+            youngestPerson = people[i];
+          }
+        }
+        console.log("Die jüngste Person ist: " + youngestPerson.name);
+        
+        // Finde die älteste Person
+        let oldestPerson = people[0];
+        for (let i = 1; i < people.length; i++) {
+          if (people[i].age > oldestPerson.age) {
+            oldestPerson = people[i];
+          }
+        }
+        console.log("Die älteste Person ist: " + oldestPerson.name);
+        
+        // Finde die Person mit den meisten Hobbies
+        let mostHobbiesPerson = people[0];
+        for (let i = 1; i < people.length; i++) {
+          if (people[i].hobbies.length > mostHobbiesPerson.hobbies.length) {
+            mostHobbiesPerson = people[i];
+          }
+        }
+        console.log("Die Person mit den meisten Hobbies ist: " + mostHobbiesPerson.name);
+        </script>
+</body>
+</html>
